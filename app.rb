@@ -31,10 +31,10 @@ class App < Sinatra::Base
     @number1 = params[:number1].to_i
     @number2 = params[:number2].to_i
 
-    @operation_symbol = '+' if @operation = 'add'
-    @operation_symbol = '-' if @operation = 'subtract'
-    @operation_symbol = '*' if @operation = 'multiply'
-    @operation_symbol = '/' if @operation = 'divide'
+    @operation_symbol = '+' if @operation == 'add'
+    @operation_symbol = '-' if @operation == 'subtract'
+    @operation_symbol = '*' if @operation == 'multiply'
+    @operation_symbol = '/' if @operation == 'divide'
 
     "#{@number1.send(@operation_symbol, @number2)}"
     #if @operation == 'add'
